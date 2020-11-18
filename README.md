@@ -20,6 +20,7 @@ Your current directory would look something like this:
 2. To build a dashboard from a jsonnet file:   
 `jsonnet -J grafonnet-lib dashboard_logs.jsonnet`
 
+This will generate a `.json` file that can be used to [import into Grafana](https://grafana.com/docs/grafana/latest/dashboards/export-import/#importing-a-dashboard)
 
 ## Reference
 * https://grafana.github.io/grafonnet-lib/

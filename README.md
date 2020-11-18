@@ -7,5 +7,15 @@ Proof of Concept to version dashboards in Grafana
 * [jsonnet](https://github.com/google/jsonnet)
 
 ## Usage
+1. Clone the `grafonnet` repository:   
+`git clone https://github.com/grafana/grafonnet-lib.git`
+
+Your current directory would look something like this:
+```
+.
+├── grafonnet-lib
+└── dashboard_logs.jsonnet
+```
+
 To build a dashboard from a jsonnet file:   
 `jsonnet -J grafonnet-lib dashboard_logs.jsonnet`

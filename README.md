@@ -6,6 +6,9 @@ Proof of Concept to version dashboards in Grafana
 * [grafonnet-lib](https://github.com/grafana/grafonnet-lib)
 * [jsonnet](https://github.com/google/jsonnet)
 
+## Examples
+* `dashboard_logs.jsonnet`: dashboard to view logs collected by loki from kubernetes
+
 ## Usage
 1. Clone the `grafonnet` repository:   
 `git clone https://github.com/grafana/grafonnet-lib.git`

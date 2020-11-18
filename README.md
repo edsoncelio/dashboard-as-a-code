@@ -17,5 +17,5 @@ Your current directory would look something like this:
 └── dashboard_logs.jsonnet
 ```
 
-To build a dashboard from a jsonnet file:   
+2. To build a dashboard from a jsonnet file:   
 `jsonnet -J grafonnet-lib dashboard_logs.jsonnet`

@@ -1,0 +1,33 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Clone grafonnet lib
+        run: git clone https://github.com/grafana/grafonnet-lib.git
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonnet
+      
+      - name: Build the dashboard
+        run: jsonnet -J grafonnet-lib dashboard_logs.jsonnet
+        
+      - name: Archive .json dashboard
+        uses: actions/upload-artifact@v2
+        with:
+          name: dashboard-json
+          path: |
+            *.json

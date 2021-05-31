@@ -21,7 +21,7 @@ jobs:
         uses: zendesk/setup-jsonnet@v7
       
       - name: Build the dashboard
-        run: jsonnet -J grafonnet-lib dashboard_logs.jsonnet
+        run: jsonnet -J grafonnet-lib dashboard_logs.jsonnet > sample_dashboard.json
         
       - name: Archive .json dashboard
         uses: actions/upload-artifact@v2

@@ -18,7 +18,7 @@ jobs:
         run: git clone https://github.com/grafana/grafonnet-lib.git
       
       - name: Setup jsonnet
-        uses: zendesk/setup-jsonnet@v1
+        uses: zendesk/setup-jsonnet@v7
       
       - name: Build the dashboard
         run: jsonnet -J grafonnet-lib dashboard_logs.jsonnet

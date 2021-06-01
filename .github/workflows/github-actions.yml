@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Archive
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         uses: zendesk/setup-jsonnet@v7
       
       - name: Build the dashboard
-        run: jsonnet -J grafonnet-lib dashboard_logs.jsonnet > sample_dashboard.json
+        run: jsonnet -J grafonnet-lib templates/logs/dash_loki_kubernetes.jsonnet > dash_loki_kubernetes.json
         
       - name: Archive .json dashboard
         uses: actions/upload-artifact@v2
